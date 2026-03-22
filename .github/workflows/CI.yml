@@ -37,7 +37,7 @@ jobs:
       with:
         name: uv-artifact
         # IMPORTANTE: Verifica si tu salida es 'dist/' o 'dist/nombre-proyecto'
-        path: dist/floresAnni
+        path: dist/floresAnni/browser
 
   deploy_dev:
     name: Deploy Dev
