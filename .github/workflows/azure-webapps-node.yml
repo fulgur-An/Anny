@@ -33,6 +33,6 @@ jobs:
       - name: Deploy to Azure Service
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'evaluacion-actions-antonio-instancia'
+          app-name: 'flores-app'
           # Desplegamos el contenido de la carpeta donde descargamos el artifact
           package: ./publish
