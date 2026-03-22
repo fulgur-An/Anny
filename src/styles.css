@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400&display=swap');
+
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
+  /* Paleta rosa suave y romántica */
+  background: radial-gradient(circle at center, #fff0f5 0%, #fce4ec 60%, #f8bbd0 100%);
+  color: #4a4a4a;
+}

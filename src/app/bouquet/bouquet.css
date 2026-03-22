@@ -1,0 +1,39 @@
+.bouquet-wrapper {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+}
+
+.bouquet-svg {
+  width: 300px;
+  filter: drop-shadow(0 8px 20px rgba(0,0,0,0.1));
+}
+
+.flower {
+  transform-origin: bottom center;
+  animation: sway 3s infinite ease-in-out;
+}
+
+.f2 { animation-delay: 0.5s; }
+.f3 { animation-delay: 1s; }
+
+@keyframes sway {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  padding: 25px;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  margin-top: -40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+h2 { font-family: 'Great Vibes', cursive; font-size: 3.5rem; color: #d81b60; margin: 0; }
+p { font-family: 'Quicksand', sans-serif; color: #880e4f; font-size: 1.1rem; margin-top: 5px; }

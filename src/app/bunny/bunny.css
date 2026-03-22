@@ -1,0 +1,25 @@
+.bunny-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 120px; /* Un poco más grande para apreciar las micro-animaciones */
+  z-index: 50;
+  pointer-events: none;
+  opacity: 0; 
+}
+
+.white-bunny-svg {
+  width: 100%;
+  height: auto;
+  /* Damos overflow visible para que las orejas no se corten al estirarse en el salto */
+  overflow: visible; 
+  filter: drop-shadow(0 10px 15px rgba(216, 27, 96, 0.15));
+}
+
+.bunny-3d-fullscreen {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  z-index: 50;
+  pointer-events: none; /* No interfiere con clics de la landing */
+}

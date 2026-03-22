@@ -1,0 +1,45 @@
+<div #bunnyContainer class="bunny-container">
+  <svg viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg" class="white-bunny-svg">
+    <defs>
+      <radialGradient id="bunnyFurGrad" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#FFFFFF"/>
+        <stop offset="100%" stop-color="#FCE4EC"/> </radialGradient>
+      <linearGradient id="innerEarGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#FFCDD2"/>
+        <stop offset="100%" stop-color="#F8BBD0"/>
+      </linearGradient>
+    </defs>
+
+    <ellipse #backLeg cx="45" cy="115" rx="15" ry="8" fill="#FCE4EC"/>
+
+    <circle #tail cx="30" cy="95" r="12" fill="#ffffff" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.1))"/>
+
+    <ellipse #body cx="75" cy="90" rx="45" ry="35" fill="url(#bunnyFurGrad)"/>
+
+    <ellipse #frontLeg cx="95" cy="118" rx="10" ry="6" fill="#ffffff"/>
+
+    <g #headGroup transform-origin="80px 75px">
+      <g #earLeft transform-origin="90px 45px">
+        <ellipse cx="85" cy="30" rx="8" ry="25" fill="#ffffff" transform="rotate(-25 85 30)"/>
+        <ellipse cx="85" cy="30" rx="4" ry="20" fill="url(#innerEarGrad)" transform="rotate(-25 85 30)"/>
+      </g>
+      <g #earRight transform-origin="105px 45px">
+        <ellipse cx="110" cy="30" rx="8" ry="25" fill="#ffffff" transform="rotate(15 110 30)"/>
+        <ellipse cx="110" cy="30" rx="4" ry="20" fill="url(#innerEarGrad)" transform="rotate(15 110 30)"/>
+      </g>
+
+      <circle cx="105" cy="65" r="25" fill="url(#bunnyFurGrad)"/>
+      <ellipse cx="115" cy="72" rx="6" ry="4" fill="#F8BBD0" opacity="0.6"/> <g #eyes transform-origin="110px 62px">
+        <ellipse #eyeLeft cx="95" cy="60" rx="3.5" ry="5.5" fill="#333"/>
+        <circle cx="94" cy="58" r="1.2" fill="#fff"/>
+        <ellipse #eyeRight cx="118" cy="60" rx="3.5" ry="5.5" fill="#333"/>
+        <circle cx="117" cy="58" r="1.2" fill="#fff"/>
+      </g>
+      
+      <g #nose transform-origin="108px 68px">
+        <circle cx="108" cy="68" r="2.5" fill="#F48FB1"/>
+        <path d="M103 73 Q108 77 113 73 M108 73 L108 76" stroke="#333" fill="none" stroke-width="1" stroke-linecap="round"/>
+      </g>
+    </g>
+  </svg>
+</div>
