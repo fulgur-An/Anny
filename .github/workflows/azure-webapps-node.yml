@@ -12,6 +12,9 @@ jobs:
     name: Deploy ${{ inputs.env }}
     runs-on: ubuntu-latest
     environment: ${{ inputs.env }}
+    permissions: # <--- AGREGA ESTO AQUÍ TAMBIÉN
+      id-token: write
+      contents: read
 
     steps:
       - name: Download artifact
