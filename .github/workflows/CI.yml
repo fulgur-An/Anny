@@ -1,0 +1,48 @@
+name: continuous integration
+
+on:
+  push:
+    branches: [ main ]
+
+permissions:
+  id-token: write
+  contents: read
+
+env:
+  NODE_VERSION: '20.x'
+
+jobs:
+  build:
+    name: "CI"
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build Angular
+      run: npm run build --configuration=production
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: uv-artifact
+        # IMPORTANTE: Verifica si tu salida es 'dist/' o 'dist/nombre-proyecto'
+        path: dist/ 
+
+  deploy_dev:
+    name: Deploy Dev
+    needs: build
+    uses: ./.github/workflows/azure-webapps-node.yml
+    with:
+      env: dev
+    secrets: inherit
